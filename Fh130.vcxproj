@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{75EE0CD6-1E41-41D1-A128-D27673D9D73B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FH130_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FH130_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Demo.c" />
+    <ClCompile Include="demo\case1.c" />
+    <ClCompile Include="demo\case2.c" />
+    <ClCompile Include="demo\case3.c" />
+    <ClCompile Include="demo\Demo.c" />
+    <ClCompile Include="demo\testDMA.c" />
+    <ClCompile Include="hbadrv\d_list.c" />
+    <ClCompile Include="hbadrv\fc_api.c" />
+    <ClCompile Include="hbadrv\hba.c" />
+    <ClCompile Include="hbadrv\hba_els.c" />
+    <ClCompile Include="hbadrv\hba_flash.c" />
+    <ClCompile Include="hbadrv\hba_test.c" />
+    <ClCompile Include="hbadrv\hba_time.c" />
+    <ClCompile Include="hbadrv\hw.c" />
+    <ClCompile Include="hbadrv\list.c" />
+    <ClCompile Include="hbadrv\spi.c" />
+    <ClCompile Include="hbadrv\utils.c" />
+    <ClCompile Include="militarytestdemo\config.c" />
+    <ClCompile Include="militarytestdemo\fcDemoTest.c" />
+    <ClCompile Include="militarytestdemo\response.c" />
+    <ClCompile Include="militarytestdemo\vx_main_test.c" />
+    <ClCompile Include="routinetestdemo\config - 副本.c" />
+    <ClCompile Include="routinetestdemo\config.c" />
+    <ClCompile Include="routinetestdemo\fcNodeTest.c" />
+    <ClCompile Include="routinetestdemo\testDMA.c" />
+    <ClCompile Include="Software\Demo.c" />
+    <ClCompile Include="Software\test.c" />
+    <ClCompile Include="software\vxworks\fc_api.c" />
+    <ClCompile Include="software\vxworks\fc_demo.c" />
+    <ClCompile Include="software\vxworks\hba.c" />
+    <ClCompile Include="software\vxworks\hba_time.c" />
+    <ClCompile Include="software\vxworks\hw.c" />
+    <ClCompile Include="software\vxworks\list.c" />
+    <ClCompile Include="software\windows\demo\demo\fc_demo.c" />
+    <ClCompile Include="software\windows\fm130\api.c" />
+    <ClCompile Include="software\windows\fm130\utility.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\driver.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\hba_time.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\hw.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\ioctl.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\read.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\utils.c" />
+    <ClCompile Include="software\windows\hbadrv\hba\write.c" />
+    <ClCompile Include="software\windows\savetodisk\demo\demo\fc_demo.c" />
+    <ClCompile Include="software\windows\savetodisk\demo\demo\file_record.c" />
+    <ClCompile Include="software\windows\savetodisk\fm130\api.c" />
+    <ClCompile Include="software\windows\savetodisk\fm130\utility.c" />
+    <ClCompile Include="Software\windows\demo_int\vx_recv_data_int.c" />
+    <ClCompile Include="software\windows\x01demo\vxworks_demo\demo_loop\vx_recv_data_loop.c" />
+    <ClCompile Include="software\windows\x01demo\win_demo_vs2010\demo_int\win_recv_data_int.c" />
+    <ClCompile Include="software\windows\x01demo\win_demo_vs2010\demo_loop\win_recv_data_loop.c" />
+    <ClCompile Include="vx_main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="demo\case3.h" />
+    <ClInclude Include="hbadrv\d_list.h" />
+    <ClInclude Include="hbadrv\endian.h" />
+    <ClInclude Include="hbadrv\fc_api.h" />
+    <ClInclude Include="hbadrv\fc_asm.h" />
+    <ClInclude Include="hbadrv\hba.h" />
+    <ClInclude Include="hbadrv\hba_els.h" />
+    <ClInclude Include="hbadrv\hba_flash.h" />
+    <ClInclude Include="hbadrv\hba_time.h" />
+    <ClInclude Include="hbadrv\hw.h" />
+    <ClInclude Include="hbadrv\list.h" />
+    <ClInclude Include="hbadrv\spi.h" />
+    <ClInclude Include="hbadrv\utils.h" />
+    <ClInclude Include="militarytestdemo\fcDemoTest.h" />
+    <ClInclude Include="militarytestdemo\precomp.h" />
+    <ClInclude Include="militarytestdemo\response.h" />
+    <ClInclude Include="routinetestdemo\fc_api.h" />
+    <ClInclude Include="software\vxworks\fc_api.h" />
+    <ClInclude Include="software\vxworks\fc_demo.h" />
+    <ClInclude Include="software\vxworks\fc_utility.h" />
+    <ClInclude Include="software\vxworks\hba.h" />
+    <ClInclude Include="software\vxworks\hba_time.h" />
+    <ClInclude Include="software\vxworks\hw.h" />
+    <ClInclude Include="software\vxworks\list.h" />
+    <ClInclude Include="software\windows\demo\demo\fc_demo.h" />
+    <ClInclude Include="software\windows\demo\demo\precomp.h" />
+    <ClInclude Include="software\windows\fm130\api.h" />
+    <ClInclude Include="software\windows\fm130\precomp.h" />
+    <ClInclude Include="software\windows\fm130\utility.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\driver.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\hba_time.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\hw.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\ioctl.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\precomp.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\public.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\read.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\Trace.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\utils.h" />
+    <ClInclude Include="software\windows\hbadrv\hba\write.h" />
+    <ClInclude Include="software\windows\savetodisk\demo\demo\fc_demo.h" />
+    <ClInclude Include="software\windows\savetodisk\demo\demo\file_record.h" />
+    <ClInclude Include="software\windows\savetodisk\demo\demo\precomp.h" />
+    <ClInclude Include="software\windows\savetodisk\fm130\api.h" />
+    <ClInclude Include="software\windows\savetodisk\fm130\precomp.h" />
+    <ClInclude Include="software\windows\savetodisk\fm130\utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="software\windows\hbadrv\hba\makefile.inc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

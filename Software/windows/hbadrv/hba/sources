@@ -1,0 +1,34 @@
+TARGETNAME=Hba
+TARGETTYPE=DRIVER
+KMDF_VERSION_MAJOR=1
+TARGETLIBS=$(TARGETLIBS) $(DDK_LIB_PATH)\ntstrsafe.lib
+INF_NAME=FM130
+NTTARGETFILE0=$(OBJ_PATH)\$(O)\$(INF_NAME).inf
+PASS0_BINPLACE=$(NTTARGETFILE0)
+
+SOURCES=driver.c    \
+        read.c      \
+        write.c     \
+        ioctl.c     \
+        hw.c        \
+        utils.c     \
+        hba_time.c  \
+
+PRECOMPILED_INCLUDE=precomp.h
+PRECOMPILED_PCH=precomp.pch
+PRECOMPILED_OBJ=precomp.obj
+
+#
+# Generate WPP tracing code
+# $(SOURCES)   -- run software preprocessor on files listed in SOURCES
+# -km          -- use kernel mode
+# -func        -- define function we'll use for tracing
+#                 This would map all TraceEvents calls to 
+#                 DoTraceMessage.
+#
+RUN_WPP= $(SOURCES)                             \
+         -km                                    \
+         -func:TraceEvents(LEVEL,FLAGS,MSG,...) \
+         -gen:{km-WdfDefault.tpl}*.tmh
+
+TARGET_DESTINATION=wdf

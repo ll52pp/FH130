@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vx_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\testDMA.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\d_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\fc_api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\hba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\hba_els.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\hba_flash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\hba_test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\hba_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\hw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\spi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hbadrv\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="militarytestdemo\config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="militarytestdemo\fcDemoTest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="militarytestdemo\response.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="militarytestdemo\vx_main_test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="routinetestdemo\config - 副本.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="routinetestdemo\config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="routinetestdemo\fcNodeTest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="routinetestdemo\testDMA.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\vxworks\fc_api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\vxworks\fc_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\vxworks\hba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\vxworks\hba_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\vxworks\hw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\vxworks\list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\demo\demo\fc_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\fm130\api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\fm130\utility.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\hba_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\hw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\ioctl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\hbadrv\hba\write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\savetodisk\demo\demo\fc_demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\savetodisk\demo\demo\file_record.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\savetodisk\fm130\api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\savetodisk\fm130\utility.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\x01demo\vxworks_demo\demo_loop\vx_recv_data_loop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\x01demo\win_demo_vs2010\demo_int\win_recv_data_int.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="software\windows\x01demo\win_demo_vs2010\demo_loop\win_recv_data_loop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\case1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\case2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\case3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Software\test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\Demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Software\Demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Software\windows\demo_int\vx_recv_data_int.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hbadrv\d_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\fc_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\fc_asm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\hba.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\hba_els.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\hba_flash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\hba_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\hw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\spi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hbadrv\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="militarytestdemo\fcDemoTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="militarytestdemo\precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="militarytestdemo\response.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="routinetestdemo\fc_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\fc_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\fc_demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\fc_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\hba.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\hba_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\hw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\vxworks\list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\demo\demo\fc_demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\demo\demo\precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\fm130\api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\fm130\precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\fm130\utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\hba_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\hw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\ioctl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\public.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\read.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\Trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\hbadrv\hba\write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\savetodisk\demo\demo\fc_demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\savetodisk\demo\demo\file_record.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\savetodisk\demo\demo\precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\savetodisk\fm130\api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\savetodisk\fm130\precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="software\windows\savetodisk\fm130\utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demo\case3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="software\windows\hbadrv\hba\makefile.inc">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,94 @@
+;/*++
+;
+;Copyright (c) Saizhi Corporation.  All rights reserved.
+;
+;Module Name:
+;
+;    FM130.INF
+;
+;Abstract:
+;    INF file for the FM130 Driver.
+;
+;--*/
+[Version]
+Signature="$WINDOWS NT$"
+Class=FiberChannel
+ClassGuid={DAA460B2-8703-421c-B4F7-3C562FD31D67}
+Provider=%MSFT%
+DriverVer=03/09/2014,1.00.0000
+CatalogFile=Hba.cat
+
+[DestinationDirs]
+DefaultDestDir=12
+Hba130.CopyFiles=12
+Hba130_Inst_CoInstaller_CopyFiles=11
+
+; ================= Class section =====================
+[ClassInstall32]
+Addreg=FiberChannelClassReg
+
+[FiberChannelClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+HKR,,DeviceCharacteristics,0x10001,0x100     ;Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)" ;Allow generic all access to system and built-in Admin.
+
+; ================= Device Install section =====================
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_10EE&DEV_7015
+
+[Manufacturer]
+%MSFT%=MSFT,NT$ARCH$
+
+[SourceDisksFiles]
+Hba.sys=1
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+[SourceDisksNames]
+1=%DISK_NAME%,
+
+; Following section is meant for Windows 2000 as 
+; it cannot parse decorated model sections
+
+; Decorated model section take precedence over undecorated ones on XP and later.
+[MSFT.NT$ARCH$]
+%Hba130.DRVDESC%=Hba130_Inst,PCI\VEN_10EE&DEV_7015
+
+[Hba130_Inst.NT]
+CopyFiles=Hba130.CopyFiles
+
+[Hba130.CopyFiles]
+Hba.sys,,,2
+
+[Hba130_Inst.NT.Services]
+AddService=Hba130,0x00000002,Hba130_Service
+
+[Hba130_Service]
+DisplayName=%Hba130.SVCDESC%
+ServiceType=1                ; SERVICE_KERNEL_DRIVER
+StartType=3                  ; SERVICE_DEMAND_START
+ErrorControl=1               ; SERVICE_ERROR_NORMAL
+ServiceBinary=%12%\Hba.sys
+
+;-------------- Hba130 Coinstaller installation
+[Hba130_Inst.NT.CoInstallers]
+AddReg=Hba130_Inst_CoInstaller_AddReg
+CopyFiles=Hba130_Inst_CoInstaller_CopyFiles
+
+[Hba130_Inst_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[Hba130_Inst_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[Hba130_Inst.NT.Wdf]
+KmdfService=Hba130, Hba130_wdfsect
+[Hba130_wdfsect]
+KmdfLibraryVersion=$KMDFVERSION$
+
+[Strings]
+MSFT="SAIZHI, Inc."
+ClassName="FiberChannel"
+Hba130.SVCDESC="FM130 Service"
+Hba130.DRVDESC="FM130 PCIe Adapter"
+DISK_NAME="FM130 Install Disk"
